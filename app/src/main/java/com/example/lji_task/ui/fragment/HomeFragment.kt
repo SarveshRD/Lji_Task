@@ -1,4 +1,4 @@
-package com.example.lji_task.fragment
+package com.example.lji_task.ui.fragment
 
 
 import android.text.Editable
@@ -6,9 +6,9 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.example.lji_task.HomeTabViewModel
+import com.example.lji_task.ui.viewModel.HomeTabViewModel
 import com.example.lji_task.R
-import com.example.lji_task.RecycleViewAdapter
+import com.example.lji_task.ui.adapter.RecycleViewAdapter
 import com.example.lji_task.base.ApiRenderState
 import com.example.lji_task.base.BaseFrag
 import com.example.lji_task.data.Item
@@ -97,7 +97,7 @@ class HomeFragment : BaseFrag<FragmentHomeBinding, HomeTabViewModel>(R.layout.fr
 
         if (dataList.isNotEmpty()) {
             adapter = RecycleViewAdapter(data)
-            binding.homeCategories.rvPopularNearYou.adapter = adapter
+            binding.homeCategories.rvItemList.adapter = adapter
             adapter.setOnItemClickListener(object :
                 RecycleViewAdapter.OnItemClickListener {
                 override fun onItemClick(position: Int, v: View) {

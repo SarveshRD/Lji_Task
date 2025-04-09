@@ -17,12 +17,7 @@ class NetworkUtil
 @Inject
 constructor(@ApplicationContext var context: Context) {
 
-    /*fun isNetworkAvailable(): Boolean {
-        val connectivityManager =
-            context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo = connectivityManager.activeNetworkInfo
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected
-    }*/
+
 
     @SuppressLint("MissingPermission")
     fun isInternetAvailable(): Boolean {
@@ -81,12 +76,6 @@ constructor(@ApplicationContext var context: Context) {
 
 }
 
-/**
- * workaround to fix injecting [NetworkUtil] in normal classes
- *
- * in hilt, field injection is not supported for all classes
- * https://developer.android.com/training/dependency-injection/hilt-android#not-supported
- */
 @EntryPoint
 @InstallIn(SingletonComponent::class)
 interface NwService {

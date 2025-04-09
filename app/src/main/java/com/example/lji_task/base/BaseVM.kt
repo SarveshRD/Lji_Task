@@ -19,10 +19,6 @@ abstract class BaseVM : ViewModel() {
     protected val state = MutableSharedFlow<ApiRenderState>()
     internal fun state(): SharedFlow<ApiRenderState> = state
 
-//    fun <T> getLiveData(executable: suspend LiveDataScope<T>.() -> Unit): LiveData<T> {
-//        return liveData(Dispatchers.IO, timeoutInMs = 0, block = executable)
-//    }
-
     fun <T> asyncScope(
         dispatcher: CoroutineDispatcher = IO,
         executable: suspend CoroutineScope.() -> T

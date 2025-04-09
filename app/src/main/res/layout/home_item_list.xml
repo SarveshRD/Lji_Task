@@ -32,7 +32,7 @@
 
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_popular_near_you"
+            android:id="@+id/rv_item_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -44,7 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/et_home_search"
             tools:ignore="MissingConstraints"
             tools:itemCount="2"
-            tools:listitem="@layout/custom_popular_near_you_list_item_layout" />
+            tools:listitem="@layout/list_item_layout" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

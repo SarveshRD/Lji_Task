@@ -3,7 +3,7 @@ package com.example.lji_task.di
 import com.example.lji_task.constants.AppConstants.UserEndUrl.BASE_URL
 import com.example.lji_task.network.ApiService
 import com.example.lji_task.network.HeaderHttpInterceptor
-import com.wss.eat_space_iz.utils.sessionManagers.UserSessionManager
+import com.example.lji_task.sessionManagers.UserSessionManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

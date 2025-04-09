@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.lji_task.fragment.HomeFragment"
+        android:name="com.example.lji_task.ui.fragment.HomeFragment"
         android:label="Home">
         <action
             android:id="@+id/action_homeFragment_to_webViewFragment"
@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/webViewFragment"
-        android:name="com.example.lji_task.fragment.WebViewFragment"
+        android:name="com.example.lji_task.ui.fragment.WebViewFragment"
         android:label="Web View">
         <argument
             android:name="url"

@@ -1,7 +1,7 @@
 package com.example.lji_task.network
 
 import com.example.lji_task.constants.AppConstants
-import com.wss.eat_space_iz.utils.sessionManagers.UserSessionManager
+import com.example.lji_task.sessionManagers.UserSessionManager
 import okhttp3.Interceptor
 import okhttp3.Response
 

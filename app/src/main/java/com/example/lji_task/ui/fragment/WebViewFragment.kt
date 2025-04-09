@@ -1,11 +1,11 @@
-package com.example.lji_task.fragment
+package com.example.lji_task.ui.fragment
 
 
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.lji_task.HomeTabViewModel
+import com.example.lji_task.ui.viewModel.HomeTabViewModel
 import com.example.lji_task.R
 import com.example.lji_task.base.ApiRenderState
 import com.example.lji_task.base.BaseFrag

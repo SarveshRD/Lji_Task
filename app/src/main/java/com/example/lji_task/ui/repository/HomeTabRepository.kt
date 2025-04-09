@@ -1,4 +1,4 @@
-package com.example.lji_task
+package com.example.lji_task.ui.repository
 
 
 import android.util.Log

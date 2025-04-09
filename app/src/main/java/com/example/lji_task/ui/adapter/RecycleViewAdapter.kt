@@ -1,12 +1,13 @@
-package com.example.lji_task
+package com.example.lji_task.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lji_task.R
 import com.example.lji_task.data.Item
-import com.example.lji_task.databinding.CustomPopularNearYouListItemLayoutBinding
+import com.example.lji_task.databinding.ListItemLayoutBinding
 
 
 class RecycleViewAdapter(private var data: List<Item>) :
@@ -16,12 +17,12 @@ class RecycleViewAdapter(private var data: List<Item>) :
         private var onItemClickListener: OnItemClickListener? = null
     }
 
-    private lateinit var binding: CustomPopularNearYouListItemLayoutBinding
+    private lateinit var binding: ListItemLayoutBinding
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         binding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
-            R.layout.custom_popular_near_you_list_item_layout,
+            R.layout.list_item_layout,
             parent,
             false
         )
@@ -52,7 +53,7 @@ class RecycleViewAdapter(private var data: List<Item>) :
     }
 
 
-    class MyViewHolder(val binding: CustomPopularNearYouListItemLayoutBinding) :
+    class MyViewHolder(val binding: ListItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
@@ -63,7 +64,7 @@ class RecycleViewAdapter(private var data: List<Item>) :
     }
 
     fun setOnItemClickListener(onItemClickListener: OnItemClickListener) {
-        RecycleViewAdapter.onItemClickListener = onItemClickListener
+        Companion.onItemClickListener = onItemClickListener
     }
 
     interface OnItemClickListener {
